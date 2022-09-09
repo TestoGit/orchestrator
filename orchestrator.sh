@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo -n "Infra Name : "
-read INFRA_NAME
+INFRA_NAME=$1
 
 cp -r TEMPLATE DEPLOYED/${INFRA_NAME}
 cd DEPLOYED/${INFRA_NAME}
@@ -23,5 +22,4 @@ cat << EOF
 ############################################################
 EOF
 
-rm temp_ip
 exit
