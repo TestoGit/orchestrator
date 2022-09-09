@@ -7,8 +7,7 @@ cd DEPLOYED/${INFRA_NAME}
 
 sed -i "s|<##INFRA_NAME##>|${INFRA_NAME}|g" *
 
-/c/workspace/terraform/bin/terraform init
-/c/workspace/terraform/bin/terraform apply -auto-approve
+terraform init && terraform apply -auto-approve
 
 cat << EOF
 ############################################################
